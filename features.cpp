@@ -25,5 +25,4 @@ void computeFeatures( string text ){
     cout << "Size: " << text.size();
     cout << "   Capacity: " << text.capacity();
     cout << "   Empty?: " << text.empty() << endl;
-
 }
