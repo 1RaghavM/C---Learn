@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main(){
-    char letter;
+    string line;
     int i;
 
     ifstream reader("poem.txt");
@@ -14,8 +15,8 @@ int main(){
     }
 
     for(i=0;! reader.eof(); i++){
-        reader.get( letter );
-        cout << letter;
+        getline( reader, line );
+        cout << line << endl;
     }
 
     reader.close();
