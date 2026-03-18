@@ -3,8 +3,8 @@ using namespace std;
 
 class Base{
     public:
-    void identify(int addr) const{
-        cout << "Base class called by 0x" << hex << addr << endl;
+    void identify(const void* addr) const{
+        cout << "Base class called by 0x" << addr << endl;
     }
 };
 
@@ -15,6 +15,6 @@ int main(){
     Base* ptrA = new SubA;
     Base* ptrB = new SubB;
 
-    ptrA -> identify((int) &ptrA);
-    ptrB -> identify((int) &ptrB);
+    ptrA -> identify(&ptrA);
+    ptrB -> identify(&ptrB);
 }
