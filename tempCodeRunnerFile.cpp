@@ -1,1 +1,2 @@
-cout << endl;
+++lo;
+        --hi;
